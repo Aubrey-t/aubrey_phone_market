@@ -17,9 +17,11 @@ class ProductProvider extends Component {
     cartTax: 0,
     cartTotal: 0
   };
+
   componentDidMount() {
     this.setProducts();
   }
+
   setProducts = () => {
     let tempProducts = [];
     storeProducts.forEach(item => {
@@ -54,8 +56,9 @@ class ProductProvider extends Component {
 
     this.setState(
       () => {
-        return { products: tempProducts, cart: [...this.state.cart, product] };
+        return { products: tempProducts, cart: [...this.state.cart, product] }; // try to understand this line
       },
+
       () => {
         this.addTotals(); // callback function(means when u are done with this function call this one)
       }
@@ -119,10 +122,10 @@ class ProductProvider extends Component {
   };
 
   removeItem = id => {
-    let tempProducts = [...this.state.products]; //desturcture
+    let tempProducts = [...this.state.products]; //destructure
     let tempCart = [...this.state.cart];
 
-    tempCart = tempCart.filter(item => item.id !== id);
+    tempCart = tempCart.filter(item => item.id !== id); // items without the ID
 
     const index = tempProducts.indexOf(this.getItem(id));
     let removedProduct = tempProducts[index];
@@ -149,8 +152,8 @@ class ProductProvider extends Component {
         return { cart: [] };
       },
       () => {
-        this.setProducts();
-        this.addTotals();
+        this.setProducts(); // new original fresh copy of the objects
+        this.addTotals(); 
       }
     );
   };
@@ -159,7 +162,7 @@ class ProductProvider extends Component {
     let SubTotal = 0;
     this.state.cart.map(item => (SubTotal += item.total));
     const tempTax = SubTotal * 0.1;
-    const tax = parseFloat(tempTax.toFixed(2));
+    const tax = parseFloat(tempTax.toFixed(2)); // Set the value to 2 decimal places 
     const total = SubTotal + tax;
     this.setState(() => {
       return {

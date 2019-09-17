@@ -11,6 +11,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 2,
     title: "Samsung S7",
@@ -23,6 +24,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 3,
     title: "HTC 10 - Black",
@@ -35,6 +37,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 4,
     title: "HTC 10 - White",
@@ -47,6 +50,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 5,
     title: "HTC Desire 626s",
@@ -59,6 +63,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 6,
     title: "Vintage Iphone",
@@ -71,6 +76,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+
   {
     id: 7,
     title: "Iphone 7",
@@ -83,6 +89,7 @@ export const storeProducts = [
     count: 0,
     total: 0
   },
+  
   {
     id: 8,
     title: "Smashed Iphone",
